@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tengitar</title>
+    <link href="image/title_image.png" rel=" shortcut icon" type="image/png" />
+    <!-- import
+       ================================================== -->
+    <link href="style/main.css" rel="stylesheet" />
+    <link href="style/content.css" rel="stylesheet" />
+    <script src="js/main.js" type="text/javascript"></script>
+    <!-- bootstrap
+       ================================================== -->
+       <link
+       crossorigin="anonymous"
+       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+       rel="stylesheet"
+/>
+<link href="style/bootstrap.css" rel="stylesheet"/>
+<!-- font awesome
+       ================================================== -->
+       <link href="style/all.css" rel="stylesheet">
+       <script defer src="js/all.js"></script>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  </head>
+
+<body>
+<!-- nav -->
+<div id="container" style="height: 100vh;
+min-height: 400px;">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top " >
+    <div class="container"><a class="navbar-brand logo smooth-scroll" href="index.html"><strong
+        style="color: aquamarine">T</strong>engitar</a>
+        <button class="navbar-toggler" data-target="#navbar1" data-toggle="collapse" type="button"><span
+                        class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbar1">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+            <li class="nav-item active"><a class="nav-link smooth-scroll" href="#team">Member</a></li>
+            <li class="nav-item active"><a class="nav-link smooth-scroll" href="#cont">Activity</a></li>
+            <li class="nav-item active"><a class="nav-link smooth-scroll" href="project.html">Project</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#">Login</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Signup</a></li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+</div>
+<!-- end nav -->
+<!-- content -->
+<div class="motivation_description"></div>
+<div class="description_detailed"></div>
+<div class="scope_limit"></div>
+<!-- risk -->
+<div class="gradient-overlay"></div>
+<div class="risk">
+        <p class="main-title" >Potential risks estimation</p>
+        <div class="content">
+	
+                <p class="lead" style="color: white;margin-left: 300px;margin-right: 300px;text-align: left;" >
+                        <br> We estimate the possibility of each risk which can affect the project on a scale from 1 to 10.  
+                        <br><br>
+                        With 1 indicate it will not affect the project and 10 indicate it will affect the project the most. 
+                        <br><br>
+                       Arduino protection 
+                  <br><br>
+                  Detail: Overvoltage should be taken into consideration. If we connect components that requires voltages and amperes more than the Arduino can supply, it will potentially damage the microprocessor and possibly fry the whole board. 
+                  
+                   
+                  <br><br>
+                  Likelihood:6 
+                  
+                   
+                  <br><br>
+                  Solution: When working with the LEDs from now on, we will use a separate, dedicated power supply for the LEDs, not taking power directly from the Arduino. 
+                  <br><br>
+                  Irregular LEDs matrix display 
+                  <br><br>
+                  Detail: The irregular shape of the LEDs matrix of our project is the reason why we need re-map the input data. The remap function, which is difficult to understand, will be handled manually by using creating a “switch” statement. The unusual matrix layout requires us to solder to connect and re-arrange the order of each LED. 
+                  
+                   
+                  <br><br>
+                  Likelihood:9 
+                  
+                   
+                  <br><br>
+                  Solution: As mentioned, to fix this problem, we will use a remap function to manually adjust the LED addresses one-by-one. After that, all the libraries used, the Adafruit libraries, should recognize the “number 4” as a large square matrix missing some LEDs.  
+                  <br><br>
+                  Memory issues 
+                  <br><br>
+                  Detail: Bitmap byte arrays, when created, will be stored inside the SRAM (static random-access memory). With 1 bit for each LED and 32 bits for its color, coupled with the low storage space of SRAM, we can expect running into various memory issues. Which may end up overload the whole system. 
+                  
+                  <br><br>
+                  
+                  Likelihood:8 
+                  
+                   
+                  <br><br>
+                  Solution:  To tackle this problem, we will use the Arduino Mega2560 as it provides much more storage than the Uno. Furthermore, we will use PROGMEM to store the byte arrays onto the Flash memory, which has much more space available compared to the SRAM.  
+                  <br><br>
+                  Explosion issue 
+                  <br><br>
+                  Detail: This contains two potential problems. One is that the resistor does not work properly which can end up overvoltage the circuit. And another is that the inappropriate type of power input may damage to the whole component. 
+                  
+                   
+                  <br><br>
+                  Likelihood: 4 
+                  
+                  <br><br>
+                  
+                  Solution: Regarding how to deal with the explosion issues, we decided to use the separate power supply instead of plugging directly into the computer which is not recommended. 
+                  <br><br>
+                  LED soldering 
+                  <br><br>
+                  Detail: The soldering process needs to be done correctly since it can affect significantly to the effectiveness of whole project. 
+                  
+                   
+                  <br><br>
+                  Likelihood: 8 
+                  
+                   
+                  <br><br>
+                  Solution: We need to draw the specific sketch to guide how we solder the LED strips precisely due to after soldering, it cannot be undone. </p>
+                </div>
+</div>
+</div>
+</section>
+</section>
+<!-- survey -->
+<section id="google_form">
+        <p class="main-title" >Survey</p>
+<div class="d-inline-flex justify-content-center mr-5 align-items-center">
+    <iframe class="gg_form" src="https://docs.google.com/forms/d/e/1FAIpQLSduM0RAwFmeqdCSmJKrfLWQVKIEHB8sALxmyFqGUM0TGD6ZYA/viewform?embedded=true" width="640" height="883" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+</section>
+<!-- end survey -->
+<!-- end content -->
+ <!--footer-->
+<footer>
+    <div class="footer">
+        <div class="footer_content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h1 class="logo-text mb-4"><img style="width:50%;height:50%;opacity: 1.7;" src="image/logo.jpg">
+                        </h1>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer_section">
+                            <h5 class="mb-4 connect_us text-uppercase" style="text-align: left;">Member</h5>
+                            <div class="member_list">
+                                <ul style="list-style:none;">
+                                    <li>s3822042 Vo Thanh Luan</li>
+                                    <br>
+                                    <li>s3751881 Tran Dang Bao Nhi</li>
+                                    <br>
+                                    <li>s3823477 Vo Gia Bao</li>
+                                    <br>
+                                    <li>s3818311 Huynh Ngoc Tuyen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer_section links">
+                            <h5 class="mb-4 connect_us text-uppercase" style="text-align: left;">Quick Access</h5>
+                            <ul>
+                                <a href="#about">
+                                    <li>About</li>
+                                </a> <a href="#team">
+                                <li>Member</li>
+                            </a> <a href="#cont">
+                                <li>Activity</li>
+                            </a> 
+                            <a href="project.html">
+                                <li>Project</li>
+                            </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer_section contact_form">
+                        <h5 class="mb-4 connect_us text-uppercase">Stay Connected</h5>
+                        <form action="index.html" method="post">
+                            <input class="form-control contact_input text_input" name="Your name" placeholder="Your name..."
+                                   required type="text">
+                            <input class="form-control contact_input text_input " name="Your email address" placeholder="Your email address... "
+                                   required type="email">
+                            <button class="btn btn-success btn-lg col-sm-12 contact_btn" type="submit">Submit</button>
+                        </form>
+                        <ul class="social_list">
+                            <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom"> &copy; 2019 Tengitar .All rights reserved</div>
+        </div>
+    </div>
+    </div>
+</footer>     
+  </body>
+</html>
