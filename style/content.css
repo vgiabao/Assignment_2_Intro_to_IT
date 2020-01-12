@@ -904,10 +904,10 @@ img {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	min-height: 800px;
+	min-height: 80vh;
 	position: relative;
-	padding: 10rem 0 15rem;
-	margin-bottom: 0;
+	padding: 2rem 0 2rem;
+	margin-bottom: 0; 
 	color: rgba(255, 255, 255, 0.3);	
 }
 
@@ -933,10 +933,9 @@ iframe{
 } 
 /* risk */
 #project_2{
-
 		text-align: center;
 		background-color: #19191b ;
-		
+	
 	  background-blend-mode: screen, difference, lighten;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -945,7 +944,7 @@ iframe{
 		background-size: cover;
 		min-height: 800px;
 		position: relative;
-		padding: 15rem 0 15rem;
+		padding: 5rem 0 5rem;
 		margin-bottom: 0;
 		color: rgba(255, 255, 255, 0.3);
 	
